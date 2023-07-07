@@ -1,0 +1,12 @@
+<h1>OK T MOCHE</h1>
+<div class="msg" #chatMessagesRef>
+  <section class="contentMsg">
+    <div class="designMsg" *ngFor="let message of message">{{ message }}</div>
+  </section>
+  <form class="writeBar">
+    <input class="writeMsg" autocomplete="off" type="text" name="search" placeholder="Write something" [(ngModel)]="newMessage" (keypress)="onKeyPress($event)">
+    <h2 (click)="onSubmit()" class="sendMsg">Envoyer</h2>
+  </form>
+</div>
+
+
